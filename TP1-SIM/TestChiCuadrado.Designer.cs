@@ -31,13 +31,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.mstxtMuestra = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.rb5 = new System.Windows.Forms.RadioButton();
-            this.rb10 = new System.Windows.Forms.RadioButton();
-            this.rb15 = new System.Windows.Forms.RadioButton();
-            this.rb20 = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnGenerar = new System.Windows.Forms.Button();
+            this.rb20 = new System.Windows.Forms.RadioButton();
+            this.rb15 = new System.Windows.Forms.RadioButton();
+            this.rb10 = new System.Windows.Forms.RadioButton();
+            this.rb5 = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label1
@@ -69,50 +69,6 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Sub Intervalos (k)";
             // 
-            // rb5
-            // 
-            this.rb5.AutoSize = true;
-            this.rb5.Location = new System.Drawing.Point(227, 117);
-            this.rb5.Name = "rb5";
-            this.rb5.Size = new System.Drawing.Size(31, 17);
-            this.rb5.TabIndex = 3;
-            this.rb5.TabStop = true;
-            this.rb5.Text = "5";
-            this.rb5.UseVisualStyleBackColor = true;
-            // 
-            // rb10
-            // 
-            this.rb10.AutoSize = true;
-            this.rb10.Location = new System.Drawing.Point(287, 117);
-            this.rb10.Name = "rb10";
-            this.rb10.Size = new System.Drawing.Size(37, 17);
-            this.rb10.TabIndex = 4;
-            this.rb10.TabStop = true;
-            this.rb10.Text = "10";
-            this.rb10.UseVisualStyleBackColor = true;
-            // 
-            // rb15
-            // 
-            this.rb15.AutoSize = true;
-            this.rb15.Location = new System.Drawing.Point(347, 117);
-            this.rb15.Name = "rb15";
-            this.rb15.Size = new System.Drawing.Size(37, 17);
-            this.rb15.TabIndex = 5;
-            this.rb15.TabStop = true;
-            this.rb15.Text = "15";
-            this.rb15.UseVisualStyleBackColor = true;
-            // 
-            // rb20
-            // 
-            this.rb20.AutoSize = true;
-            this.rb20.Location = new System.Drawing.Point(407, 117);
-            this.rb20.Name = "rb20";
-            this.rb20.Size = new System.Drawing.Size(37, 17);
-            this.rb20.TabIndex = 6;
-            this.rb20.TabStop = true;
-            this.rb20.Text = "20";
-            this.rb20.UseVisualStyleBackColor = true;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -143,6 +99,50 @@
             this.btnGenerar.UseVisualStyleBackColor = true;
             this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
+            // rb20
+            // 
+            this.rb20.AutoSize = true;
+            this.rb20.Location = new System.Drawing.Point(407, 117);
+            this.rb20.Name = "rb20";
+            this.rb20.Size = new System.Drawing.Size(37, 17);
+            this.rb20.TabIndex = 6;
+            this.rb20.TabStop = true;
+            this.rb20.Text = "20";
+            this.rb20.UseVisualStyleBackColor = true;
+            // 
+            // rb15
+            // 
+            this.rb15.AutoSize = true;
+            this.rb15.Location = new System.Drawing.Point(347, 117);
+            this.rb15.Name = "rb15";
+            this.rb15.Size = new System.Drawing.Size(37, 17);
+            this.rb15.TabIndex = 5;
+            this.rb15.TabStop = true;
+            this.rb15.Text = "15";
+            this.rb15.UseVisualStyleBackColor = true;
+            // 
+            // rb10
+            // 
+            this.rb10.AutoSize = true;
+            this.rb10.Location = new System.Drawing.Point(287, 117);
+            this.rb10.Name = "rb10";
+            this.rb10.Size = new System.Drawing.Size(37, 17);
+            this.rb10.TabIndex = 4;
+            this.rb10.TabStop = true;
+            this.rb10.Text = "10";
+            this.rb10.UseVisualStyleBackColor = true;
+            // 
+            // rb5
+            // 
+            this.rb5.AutoSize = true;
+            this.rb5.Location = new System.Drawing.Point(227, 117);
+            this.rb5.Name = "rb5";
+            this.rb5.Size = new System.Drawing.Size(31, 17);
+            this.rb5.TabIndex = 3;
+            this.rb5.TabStop = true;
+            this.rb5.Text = "5";
+            this.rb5.UseVisualStyleBackColor = true;
+            // 
             // TestChiCuadrado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -171,12 +171,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MaskedTextBox mstxtMuestra;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton rb5;
-        private System.Windows.Forms.RadioButton rb10;
-        private System.Windows.Forms.RadioButton rb15;
-        private System.Windows.Forms.RadioButton rb20;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnGenerar;
+        private System.Windows.Forms.RadioButton rb20;
+        private System.Windows.Forms.RadioButton rb15;
+        private System.Windows.Forms.RadioButton rb10;
+        private System.Windows.Forms.RadioButton rb5;
     }
 }
