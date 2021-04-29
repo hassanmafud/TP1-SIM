@@ -16,7 +16,7 @@ namespace TP1_SIM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMenuTP1());
+            Application.Run(new Menu());
         }
     }
 }

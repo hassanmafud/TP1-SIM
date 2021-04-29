@@ -1,6 +1,6 @@
 ﻿namespace TP1_SIM
 {
-    partial class FormMenuTP1
+    partial class GeneradorAleatorios
     {
         /// <summary>
         /// Variable del diseñador necesaria.
