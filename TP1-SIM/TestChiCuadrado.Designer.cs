@@ -36,6 +36,8 @@
             this.rb15 = new System.Windows.Forms.RadioButton();
             this.rb20 = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnGenerar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -51,7 +53,7 @@
             // mstxtMuestra
             // 
             this.mstxtMuestra.Location = new System.Drawing.Point(253, 67);
-            this.mstxtMuestra.Mask = "99999";
+            this.mstxtMuestra.Mask = "9999";
             this.mstxtMuestra.Name = "mstxtMuestra";
             this.mstxtMuestra.Size = new System.Drawing.Size(59, 20);
             this.mstxtMuestra.TabIndex = 1;
@@ -121,11 +123,33 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Chi Cuadrado";
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(423, 498);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 10;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnGenerar
+            // 
+            this.btnGenerar.Location = new System.Drawing.Point(53, 154);
+            this.btnGenerar.Name = "btnGenerar";
+            this.btnGenerar.Size = new System.Drawing.Size(75, 23);
+            this.btnGenerar.TabIndex = 11;
+            this.btnGenerar.Text = "Generar";
+            this.btnGenerar.UseVisualStyleBackColor = true;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
+            // 
             // TestChiCuadrado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(531, 574);
+            this.ClientSize = new System.Drawing.Size(554, 551);
+            this.Controls.Add(this.btnGenerar);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.rb20);
             this.Controls.Add(this.rb15);
@@ -135,6 +159,7 @@
             this.Controls.Add(this.mstxtMuestra);
             this.Controls.Add(this.label1);
             this.Name = "TestChiCuadrado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "TestChiCuadrado";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -151,5 +176,7 @@
         private System.Windows.Forms.RadioButton rb15;
         private System.Windows.Forms.RadioButton rb20;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnGenerar;
     }
 }

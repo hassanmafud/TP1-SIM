@@ -27,8 +27,16 @@ namespace TP1_SIM
         {
             TestChiCuadrado t  = new TestChiCuadrado();
             t.ShowDialog();
+            
 
       
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            Menu menu = new Menu();
+           
+            //menu.CenterToScreen();
         }
     }
 }

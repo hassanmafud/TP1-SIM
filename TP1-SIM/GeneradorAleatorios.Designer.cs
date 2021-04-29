@@ -36,6 +36,8 @@
             this.lblMetodo = new System.Windows.Forms.Label();
             this.cbMixto = new System.Windows.Forms.CheckBox();
             this.dgvTabla = new System.Windows.Forms.DataGridView();
+            this.ite = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnGenerar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -49,8 +51,6 @@
             this.lblK = new System.Windows.Forms.Label();
             this.lblG = new System.Windows.Forms.Label();
             this.txtG = new System.Windows.Forms.TextBox();
-            this.ite = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnProximo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabla)).BeginInit();
             this.SuspendLayout();
@@ -109,14 +109,38 @@
             this.dgvTabla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ite,
             this.rnd});
-            this.dgvTabla.Location = new System.Drawing.Point(54, 174);
+            this.dgvTabla.Location = new System.Drawing.Point(79, 174);
             this.dgvTabla.Name = "dgvTabla";
-            this.dgvTabla.Size = new System.Drawing.Size(364, 247);
+            this.dgvTabla.Size = new System.Drawing.Size(364, 385);
             this.dgvTabla.TabIndex = 6;
+            // 
+            // ite
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.NullValue = null;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ite.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ite.HeaderText = "i";
+            this.ite.Name = "ite";
+            this.ite.Width = 160;
+            // 
+            // rnd
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Format = "N4";
+            dataGridViewCellStyle4.NullValue = null;
+            this.rnd.DefaultCellStyle = dataGridViewCellStyle4;
+            this.rnd.HeaderText = "RND";
+            this.rnd.MaxInputLength = 6;
+            this.rnd.Name = "rnd";
+            this.rnd.Width = 160;
             // 
             // btnGenerar
             // 
-            this.btnGenerar.Location = new System.Drawing.Point(236, 479);
+            this.btnGenerar.Location = new System.Drawing.Point(258, 590);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(75, 23);
             this.btnGenerar.TabIndex = 7;
@@ -126,7 +150,7 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(54, 427);
+            this.btnLimpiar.Location = new System.Drawing.Point(77, 565);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
             this.btnLimpiar.TabIndex = 8;
@@ -136,7 +160,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(343, 479);
+            this.btnSalir.Location = new System.Drawing.Point(368, 565);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 9;
@@ -228,39 +252,15 @@
             // 
             // txtG
             // 
-            this.txtG.Location = new System.Drawing.Point(403, 84);
+            this.txtG.Location = new System.Drawing.Point(404, 84);
             this.txtG.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtG.Name = "txtG";
             this.txtG.Size = new System.Drawing.Size(39, 26);
             this.txtG.TabIndex = 6;
             // 
-            // ite
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle3.NullValue = null;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ite.DefaultCellStyle = dataGridViewCellStyle3;
-            this.ite.HeaderText = "i";
-            this.ite.Name = "ite";
-            this.ite.Width = 160;
-            // 
-            // rnd
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Format = "N4";
-            dataGridViewCellStyle4.NullValue = null;
-            this.rnd.DefaultCellStyle = dataGridViewCellStyle4;
-            this.rnd.HeaderText = "RND";
-            this.rnd.MaxInputLength = 6;
-            this.rnd.Name = "rnd";
-            this.rnd.Width = 160;
-            // 
             // btnProximo
             // 
-            this.btnProximo.Location = new System.Drawing.Point(424, 398);
+            this.btnProximo.Location = new System.Drawing.Point(449, 404);
             this.btnProximo.Name = "btnProximo";
             this.btnProximo.Size = new System.Drawing.Size(75, 23);
             this.btnProximo.TabIndex = 19;
@@ -268,11 +268,11 @@
             this.btnProximo.UseVisualStyleBackColor = true;
             this.btnProximo.Click += new System.EventHandler(this.btnProximo_Click);
             // 
-            // FormMenuTP1
+            // GeneradorAleatorios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(505, 527);
+            this.ClientSize = new System.Drawing.Size(554, 625);
             this.Controls.Add(this.btnProximo);
             this.Controls.Add(this.txtG);
             this.Controls.Add(this.lblG);
@@ -295,7 +295,8 @@
             this.Controls.Add(this.lblRaiz);
             this.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "FormMenuTP1";
+            this.Name = "GeneradorAleatorios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Serie De Numeros Aleatorios";
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabla)).EndInit();
             this.ResumeLayout(false);

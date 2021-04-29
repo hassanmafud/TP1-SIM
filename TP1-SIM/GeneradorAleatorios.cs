@@ -334,15 +334,16 @@ namespace TP1_SIM
                     axc = a * x + c;
                     resto = axc % m;
                     rnd = resto / m;
-                    
+                    //rnd = resto / (m-1);
                 }
                 else
                 {
                     axc = a * resto + c;
                     resto = axc % m;
                     rnd = resto / m;
+                    //rnd = resto / (m-1);
                 }
-                
+
 
                 dgvTabla.Rows.Add(i,rnd);
                 
