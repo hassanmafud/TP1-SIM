@@ -12,6 +12,7 @@ namespace TP1_SIM
 {
     public partial class GeneradorAleatorios : Form
     {
+        //COMENTARIO
         private bool bandOk = false;
         private bool proximo = false;
         public GeneradorAleatorios()
