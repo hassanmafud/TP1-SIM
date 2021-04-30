@@ -39,12 +39,14 @@
             this.rb10 = new System.Windows.Forms.RadioButton();
             this.rb5 = new System.Windows.Forms.RadioButton();
             this.dgvSerie = new System.Windows.Forms.DataGridView();
-            this.dgvFrecuencias = new System.Windows.Forms.DataGridView();
             this.serie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvFrecuencias = new System.Windows.Forms.DataGridView();
             this.desde = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hasta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSerie)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFrecuencias)).BeginInit();
             this.SuspendLayout();
@@ -162,6 +164,11 @@
             this.dgvSerie.Size = new System.Drawing.Size(124, 297);
             this.dgvSerie.TabIndex = 12;
             // 
+            // serie
+            // 
+            this.serie.HeaderText = "Serie";
+            this.serie.Name = "serie";
+            // 
             // dgvFrecuencias
             // 
             this.dgvFrecuencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -169,16 +176,13 @@
             this.desde,
             this.hasta,
             this.fo,
-            this.fe});
+            this.fe,
+            this.c,
+            this.ac});
             this.dgvFrecuencias.Location = new System.Drawing.Point(151, 195);
             this.dgvFrecuencias.Name = "dgvFrecuencias";
             this.dgvFrecuencias.Size = new System.Drawing.Size(439, 297);
             this.dgvFrecuencias.TabIndex = 13;
-            // 
-            // serie
-            // 
-            this.serie.HeaderText = "Serie";
-            this.serie.Name = "serie";
             // 
             // desde
             // 
@@ -199,6 +203,16 @@
             // 
             this.fe.HeaderText = "Fe";
             this.fe.Name = "fe";
+            // 
+            // c
+            // 
+            this.c.HeaderText = "C";
+            this.c.Name = "c";
+            // 
+            // ac
+            // 
+            this.ac.HeaderText = "c AC";
+            this.ac.Name = "ac";
             // 
             // TestChiCuadrado
             // 
@@ -246,5 +260,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn hasta;
         private System.Windows.Forms.DataGridViewTextBoxColumn fo;
         private System.Windows.Forms.DataGridViewTextBoxColumn fe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ac;
     }
 }

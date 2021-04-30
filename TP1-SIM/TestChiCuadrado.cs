@@ -134,17 +134,23 @@ namespace TP1_SIM
                     }
                 }
             }
+            double sumaC = 0;
             for (int i = 0; i < intervalos.Length; i++)
             {
+                
+
                 if (i == 0)
                 {
-                    
-                    dgvFrecuencias.Rows.Add(0, intervalos[i],frecuencias[i], suma/intervalos.Length);
+
+                    double c = Math.Round(Math.Pow(frecuencias[i] - suma / intervalos.Length, 2) / suma / intervalos.Length,4);
+                    sumaC += c;
+                    dgvFrecuencias.Rows.Add(0, intervalos[i],frecuencias[i], suma/intervalos.Length,c,sumaC);
                 }
                 else
                 {
-
-                    dgvFrecuencias.Rows.Add(intervalos[i - 1], intervalos[i],frecuencias[i], suma/intervalos.Length);
+                    double c = Math.Round(Math.Pow(frecuencias[i] - suma / intervalos.Length, 2) / suma / intervalos.Length, 4);
+                    sumaC += c;
+                    dgvFrecuencias.Rows.Add(intervalos[i - 1], intervalos[i],frecuencias[i], suma/intervalos.Length,c,sumaC);
                 }
 
             }
