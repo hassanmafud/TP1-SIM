@@ -41,11 +41,16 @@ namespace TP1_SIM
         {
 
             validarIngreso();
+            dgvFrecuencias.Rows.Clear();
+            dgvSerie.Rows.Clear();
             if (band_Ok)
             {
-                double[] elem = generarAleatorios(mstxtMuestra.Text);
+                double [] elem = generarAleatorios(mstxtMuestra.Text);
                 double media = metodoMedia(elem);
                 double varianza = metodoVarianza(elem);
+                double[]  intervalos = generarIntervalos(elem);
+                CargarFrecuencias(elem, intervalos);
+                
             }
             
 
@@ -74,11 +79,78 @@ namespace TP1_SIM
             
             return num;
         }
-        public void generarIntervalos()
+        public double[] generarIntervalos(double [] numeros)
         {
             int num = cantidadIntervalos();
             
+            double[] intervalos = new double[num];
+            float tam =  1 / (float) num;
 
+            for (int i = 0; i < intervalos.Length; i++)
+            {
+              
+                if (i == 0)
+                {
+                    intervalos[i] = Math.Round(tam,4);                   
+                }
+                else
+                {                   
+                    intervalos[i] = Math.Round(intervalos[i-1] + tam,4);         
+                }
+                Console.WriteLine(intervalos[i]);
+                
+            }
+
+            return intervalos;
+           
+        }
+        private void CargarFrecuencias(double[] numeros , double[] intervalos)
+        {
+            int[] frecuencias = new int[intervalos.Length];
+            double suma = 0;
+            for (int i = 0; i < numeros.Length; i++)
+            {
+                suma += numeros[i];
+
+                for (int j = 0; j < intervalos.Length; j++)
+                {
+                    if(j == 0)
+                    {
+                        if (numeros[i] < intervalos[j])
+                        {
+                            frecuencias[j]++;
+
+
+                        }
+                    }
+                    else
+                    {
+                        if ( intervalos[j-1] < numeros[i] && numeros[i] < intervalos[j])
+                        {
+                            frecuencias[j]++;
+
+
+                        }
+                    }
+                }
+            }
+            for (int i = 0; i < intervalos.Length; i++)
+            {
+                if (i == 0)
+                {
+                    
+                    dgvFrecuencias.Rows.Add(0, intervalos[i],frecuencias[i], suma/intervalos.Length);
+                }
+                else
+                {
+
+                    dgvFrecuencias.Rows.Add(intervalos[i - 1], intervalos[i],frecuencias[i], suma/intervalos.Length);
+                }
+
+            }
+            
+
+            
         }
         
         private double[]  generarAleatorios(string muestra)
@@ -92,7 +164,7 @@ namespace TP1_SIM
             {
                 numeros[i] = Math.Round(rnd.NextDouble(), 4);
                 Console.WriteLine(numeros[i]);
-                
+                dgvSerie.Rows.Add(numeros[i]);
             }
 
             return numeros;
@@ -127,6 +199,22 @@ namespace TP1_SIM
             Console.WriteLine("La Varianza es:" + varianza);
             return varianza;
         }
+
+        //private void cargarTabla()
+        //{
+        //    Random random = new Random();
+
+        //    double rn1;
+        //    double rn2;
+
+        //    for (int i = 0; i < 15; i++)
+        //    {
+        //        rn1 = random.NextDouble();
+        //        rn2 = random.NextDouble();
+
+        //        dgvRandom.Rows.Add(rn1,rn2);
+        //    }
+        //}
 
         
         private void btnSalir_Click(object sender, EventArgs e)

@@ -38,6 +38,15 @@
             this.rb15 = new System.Windows.Forms.RadioButton();
             this.rb10 = new System.Windows.Forms.RadioButton();
             this.rb5 = new System.Windows.Forms.RadioButton();
+            this.dgvSerie = new System.Windows.Forms.DataGridView();
+            this.dgvFrecuencias = new System.Windows.Forms.DataGridView();
+            this.serie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.desde = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hasta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSerie)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFrecuencias)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -81,7 +90,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(423, 498);
+            this.btnSalir.Location = new System.Drawing.Point(452, 516);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 10;
@@ -143,11 +152,61 @@
             this.rb5.Text = "5";
             this.rb5.UseVisualStyleBackColor = true;
             // 
+            // dgvSerie
+            // 
+            this.dgvSerie.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSerie.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.serie});
+            this.dgvSerie.Location = new System.Drawing.Point(12, 195);
+            this.dgvSerie.Name = "dgvSerie";
+            this.dgvSerie.Size = new System.Drawing.Size(124, 297);
+            this.dgvSerie.TabIndex = 12;
+            // 
+            // dgvFrecuencias
+            // 
+            this.dgvFrecuencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFrecuencias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.desde,
+            this.hasta,
+            this.fo,
+            this.fe});
+            this.dgvFrecuencias.Location = new System.Drawing.Point(151, 195);
+            this.dgvFrecuencias.Name = "dgvFrecuencias";
+            this.dgvFrecuencias.Size = new System.Drawing.Size(439, 297);
+            this.dgvFrecuencias.TabIndex = 13;
+            // 
+            // serie
+            // 
+            this.serie.HeaderText = "Serie";
+            this.serie.Name = "serie";
+            // 
+            // desde
+            // 
+            this.desde.HeaderText = "Desde";
+            this.desde.Name = "desde";
+            // 
+            // hasta
+            // 
+            this.hasta.HeaderText = "Hasta";
+            this.hasta.Name = "hasta";
+            // 
+            // fo
+            // 
+            this.fo.HeaderText = "Fo";
+            this.fo.Name = "fo";
+            // 
+            // fe
+            // 
+            this.fe.HeaderText = "Fe";
+            this.fe.Name = "fe";
+            // 
             // TestChiCuadrado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 551);
+            this.ClientSize = new System.Drawing.Size(602, 551);
+            this.Controls.Add(this.dgvFrecuencias);
+            this.Controls.Add(this.dgvSerie);
             this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.label3);
@@ -161,6 +220,8 @@
             this.Name = "TestChiCuadrado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "TestChiCuadrado";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSerie)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFrecuencias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,5 +239,12 @@
         private System.Windows.Forms.RadioButton rb15;
         private System.Windows.Forms.RadioButton rb10;
         private System.Windows.Forms.RadioButton rb5;
+        private System.Windows.Forms.DataGridView dgvSerie;
+        private System.Windows.Forms.DataGridViewTextBoxColumn serie;
+        private System.Windows.Forms.DataGridView dgvFrecuencias;
+        private System.Windows.Forms.DataGridViewTextBoxColumn desde;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hasta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fe;
     }
 }
